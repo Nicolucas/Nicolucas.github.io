@@ -1,7 +1,65 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animated 3D Earth</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="earth-animation.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      canvas {
+        width: 50%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+      }
+      .panel {
+        width: 50%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #f1f1f1;
+        overflow: hidden;
+        transition: width 0.5s;
+      }
+      .panel:hover {
+        width: 60%;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div class="panel">
+      <h1>Panel</h1>
+      <p>This is the panel content.</p>
+    </div>
+    <header>
+      <h1>Animated 3D Earth</h1>
+    </header>
+    <footer>
+      <p>Made by [your name]</p>
+    </footer>
+  </body>
 </html>
